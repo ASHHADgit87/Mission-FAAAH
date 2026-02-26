@@ -3,10 +3,10 @@
   "displayName": "Mission FAAAH",
   "publisher": "ashhadullah-dev",
   "description": "Screams FAAAAH on failure, plays GTA San Andreas 'Mission Passed' on success",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "icon": "icon.png",
   "engines": {
-    "vscode": "^1.109.0"
+    "vscode": "^1.108.9"
   },
   "categories": [
     "Other"
