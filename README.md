@@ -14,7 +14,7 @@ This architecture keeps concerns separate: event detection, audio playback, and 
 ## 🧩 Extension Model
 
 Mission FAAAH is distributed as a **VS Code Extension** via the Marketplace. It runs entirely within the editor, requires no external services, and respects the user’s local environment. All sound files are bundled with the extension, making it a self-contained, offline-friendly tool.
-
+https://marketplace.visualstudio.com/publishers/ashhadullah-dev
 ---
 
 ## ✨ Features
