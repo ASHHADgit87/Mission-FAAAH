@@ -26,14 +26,6 @@ Mission FAAAH is distributed as a **VS Code Extension** via the Marketplace. It 
 
 ---
 
-## 🔑 Key Functionality
-
-- **Zero Configuration** – install the extension, open a terminal, and enjoy audio cues.
-- **Works with any shell** (PowerShell, bash, zsh, fish) as long as VS Code’s shell integration is enabled.
-- **Fallback Manual Mode** – if shell integration isn’t available, you can still trigger sounds via the command palette.
-- **Cross-platform** – tested on Windows, macOS, and Linux (audio playback depends on system-available players).
-
----
 
 ## 🛠️ Tech Stack
 
@@ -51,8 +43,6 @@ Install the extension from the official Marketplace:
 
 https://marketplace.visualstudio.com/items?itemName=ashhadullah-dev.ashhaddev-mission-faah
 
-Click **Install** and open in VS Code.
-
 ---
 
 ### 💻 VS Code (Direct Install)
@@ -69,16 +59,6 @@ Or manually:
 2. Press `Ctrl + Shift + X`  
 3. Search for **Mission FAAAH**  
 4. Click **Install**
-
----
-
-### ⚙️ Enable Shell Integration (Important)
-
-If not already enabled:
-
-1. Open Settings (`Ctrl + ,`)
-2. Set `terminal.integrated.shellIntegration.enabled` to `true`
-3. Restart VS Code
 
 ---
 
