@@ -53,7 +53,6 @@ Mission FAAAH is distributed as a **VS Code Extension** via the Marketplace. It 
 3. **Open a terminal** and run any command:
    - A successful command (like `echo hello`) will play **Mission Passed**.
    - A failing command (like `invalid-command`) will play **FAAAAH**.
-4. **Manual testing** – open the command palette (`Ctrl+Shift+P`) and type “Play Success Sound” or “Play Failure Sound”.
 
 ---
 

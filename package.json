@@ -1,8 +1,10 @@
 {
   "name": "ashhaddev-mission-faah",
   "displayName": "Mission FAAAH",
+  "publisher": "ashhadullah-dev",
   "description": "Screams FAAAAH on failure, plays GTA San Andreas 'Mission Passed' on success",
   "version": "0.0.1",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.109.0"
   },
@@ -12,17 +14,17 @@
   "activationEvents": ["onStartupFinished"],
   "main": "./out/extension.js",
   "contributes": {
-  "commands": [
-    {
-      "command": "missionFaah.playSuccess",
-      "title": "Play Success Sound"
-    },
-    {
-      "command": "missionFaah.playFailure",
-      "title": "Play Failure Sound"
-    }
-  ]
-},
+    "commands": [
+      {
+        "command": "missionFaah.playSuccess",
+        "title": "Play Success Sound"
+      },
+      {
+        "command": "missionFaah.playFailure",
+        "title": "Play Failure Sound"
+      }
+    ]
+  },
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -44,6 +46,9 @@
   },
   "dependencies": {
     "sound-play": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ASHHADgit87/mission-faaah"
   }
-  
 }
