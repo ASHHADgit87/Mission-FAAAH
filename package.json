@@ -9,16 +9,20 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "ashhaddev-mission-faah.helloWorld",
-        "title": "Hello World"
-      }
-    ]
-  },
+  "commands": [
+    {
+      "command": "missionFaah.playSuccess",
+      "title": "Play Success Sound"
+    },
+    {
+      "command": "missionFaah.playFailure",
+      "title": "Play Failure Sound"
+    }
+  ]
+},
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -28,13 +32,18 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.109.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.54.0",
+    "@types/play-sound": "^1.1.2",
+    "@types/vscode": "^1.109.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
     "eslint": "^9.39.2",
     "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.54.0"
+  },
+  "dependencies": {
+    "sound-play": "^1.1.0"
   }
+  
 }
