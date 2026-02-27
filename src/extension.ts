@@ -4,17 +4,20 @@ import * as sound from "sound-play";
 
 export function activate(context: vscode.ExtensionContext) {
   const playSound = async (fileName: string) => {
-    // Use joinPath with the extensionUri for better compatibility
-    const soundUri = vscode.Uri.joinPath(context.extensionUri, "media", fileName);
-    const soundPath = soundUri.fsPath; // Convert URI to a string path for the 'sound-play' library
-    
+    const soundUri = vscode.Uri.joinPath(
+      context.extensionUri,
+      "media",
+      fileName,
+    );
+    const soundPath = soundUri.fsPath;
+
     try {
-        await sound.play(soundPath);
-        console.log(`✅ Played ${fileName}`);
+      await sound.play(soundPath);
+      console.log(` Played ${fileName}`);
     } catch (err: any) {
-        vscode.window.showErrorMessage("Sound error: " + (err.message || err));
+      vscode.window.showErrorMessage("Sound error: " + (err.message || err));
     }
-};
+  };
 
   context.subscriptions.push(
     vscode.commands.registerCommand("missionFaah.playSuccess", () => {
