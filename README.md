@@ -1,44 +1,60 @@
 # Mission FAAAH
 
-**Mission FAAAH** is a VS Code extension that adds audio feedback to your terminal commands. When a command succeeds, it plays the iconic “Mission Passed” sound from GTA San Andreas; when it fails, you’ll hear a loud **FAAAAH** – the famous meme. Built with TypeScript and the VS Code API, it provides both automatic and manual sound triggers to make your development sessions more entertaining.
+**Mission FAAAH** is a VS Code extension that adds entertaining audio feedback to terminal commands. Built with **TypeScript** and the **VS Code Extension API**, it automatically plays the iconic **"Mission Passed"** sound from GTA: San Andreas when a command succeeds, and the famous **"FAAAAH"** meme sound when a command fails.
+
+The extension runs entirely inside Visual Studio Code, providing instant audio feedback without requiring any external services.
 
 ---
 
-## 🏛️ Architecture
+# Architecture
 
-Mission FAAAH follows an **Event-Driven Extension Architecture** inside VS Code:  
-This architecture keeps concerns separate: event detection, audio playback, and user commands are each handled by dedicated modules.
+Mission FAAAH follows an **Event-Driven Extension Architecture**, separating terminal event detection, audio playback, and command handling into independent modules.
+
+| Component | Responsibility |
+|---|---|
+| Extension Runtime | Integrates with the VS Code Extension API |
+| Event Listener | Monitors terminal command execution |
+| Audio Engine | Plays success and failure sound effects |
+| Command System | Handles extension commands and activation |
 
 ---
 
-## 🧩 Extension Model
+# Extension Model
 
-Mission FAAAH is distributed as a **VS Code Extension** via the Marketplace. It runs entirely within the editor, requires no external services, and respects the user’s local environment. All sound files are bundled with the extension, making it a self-contained, offline-friendly tool.
+Mission FAAAH is distributed as a **Visual Studio Code Extension** through the VS Code Marketplace. It operates entirely within the editor, requires no external services, and works offline since all audio assets are bundled with the extension.
+
+Publisher:
+
 https://marketplace.visualstudio.com/publishers/ashhadullah-dev
 
 ---
 
-## ✨ Features
+# Features
 
-### 🎮 Automatic Sound Feedback
-- Listens to every command executed in the integrated terminal.
-- **Success** (exit code 0) → `mission-passed.mp3`
-- **Failure** (non-zero exit code) → `faaa.mp3`
+## Automatic Audio Feedback
 
----
-
-
-## 🛠️ Tech Stack
-
-- **Extension Runtime:** VS Code API (TypeScript)
-- **Language:** TypeScript
-- **Package Manager:** npm
+| Feature | Description |
+|---|---|
+| Terminal Monitoring | Detects commands executed in the integrated terminal |
+| Success Sound | Plays **Mission Passed** when a command exits successfully |
+| Failure Sound | Plays **FAAAAH** when a command exits with an error |
+| Offline Support | Audio files are bundled with the extension |
 
 ---
 
-## 🚀 Getting Started
+# Tech Stack
 
-### 🛒 Marketplace
+| Layer | Technology |
+|---|---|
+| Extension Runtime | VS Code Extension API |
+| Language | TypeScript |
+| Package Manager | npm |
+
+---
+
+# Installation
+
+## VS Code Marketplace
 
 Install the extension from the official Marketplace:
 
@@ -46,33 +62,36 @@ https://marketplace.visualstudio.com/items?itemName=ashhadullah-dev.ashhaddev-mi
 
 ---
 
-### 💻 VS Code (Direct Install)
+## Direct Installation
 
-You can install it directly inside VS Code using:
+Install directly inside Visual Studio Code using:
 
-```
+```text
 vscode:extension/ashhadullah-dev.ashhaddev-mission-faah
 ```
 
-Or manually:
+Or install manually:
 
-1. Open VS Code  
-2. Press `Ctrl + Shift + X`  
-3. Search for **Mission FAAAH**  
-4. Click **Install**
-
----
-
-### 🎮 Test It
-
-Open a terminal and run any command:
-
-- `echo hello` → Plays **Mission Passed**
-- `invalid-command` → Plays **FAAAAH**
+1. Open Visual Studio Code.
+2. Open the **Extensions** panel (`Ctrl + Shift + X`).
+3. Search for **Mission FAAAH**.
+4. Click **Install**.
 
 ---
 
-## 👨‍💻 Creator & Developer
+# Usage
 
-- **Muhammad Ashhadullah Zaheer**
-- 🔗 LinkedIn: [Muhammad Ashhadullah Zaheer](https://www.linkedin.com/in/muhammad-ashhadullah-zaheer-41194a340/)
+Run any command inside the integrated terminal.
+
+| Command | Result |
+|---|---|
+| `echo hello` | Plays the **Mission Passed** sound |
+| `invalid-command` | Plays the **FAAAAH** sound |
+
+---
+
+# Creator & Developer
+
+**Muhammad Ashhadullah Zaheer**
+
+LinkedIn: https://www.linkedin.com/in/muhammad-ashhadullah-zaheer/
