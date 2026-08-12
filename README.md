@@ -1,3 +1,5 @@
+
+
 # Mission FAAAH
 
 **Mission FAAAH** is a VS Code extension that adds entertaining audio feedback to terminal commands. Built with **TypeScript** and the **VS Code Extension API**, it automatically plays the iconic **"Mission Passed"** sound from GTA: San Andreas when a command succeeds, and the famous **"FAAAAH"** meme sound when a command fails.
@@ -80,6 +82,8 @@ Or install manually:
 ---
 
 # Usage
+
+**Prerequisite:** Ensure **Shell Integration** is enabled in VS Code settings for automatic terminal monitoring.
 
 Run any command inside the integrated terminal.
 
